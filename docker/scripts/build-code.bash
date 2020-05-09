@@ -37,4 +37,9 @@ docker run --rm \
     --volume $output_dir:/cpp-build-volumes/artifacts:rw \
     $image_name
 
-exit $?
+if [[ "$?" == "0" ]]; then
+    echo
+    echo "BuildCode: build complete. Run './build/hello_world' to see result"
+    exit 0
+fi
+exit 1

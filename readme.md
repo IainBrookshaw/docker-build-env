@@ -12,6 +12,8 @@ language.
 2. build the source code: `./docker/scripts/build-code.bash <image-name>`
 3. run the output executable: `./build/hello_world`
 
+All make/gcc caching should work as normal (run (2) multiple times to see this)
+
 (nb: the image names must match)
 When the `build-code.bash` script is run, the project in `src` will be build
 and the resultant binaries output to `build`. They should be run-able at that
