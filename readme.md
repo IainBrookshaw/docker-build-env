@@ -1,5 +1,9 @@
 # Dockerized C++ Build Environment
 
+__Copyright__ (c) 2020, Iain Brookshaw
+
+All Rights Reserved
+
 This is a simple example of fully containerized c++ build. Using this approach
 you can build projects with dependencies fully removed from those on your 
 system (eg: you could use a different compiler, versions of std, etc.)
