@@ -8,13 +8,9 @@
 #
 # the directory 'docker' is expected to be the root of the docker build context
 #
-FROM alpine:3.11
+FROM ubuntu:18.04
 
-RUN apk update && apk upgrade && apk add --virtual \
-    build-dependencies \
-    build-base \
-    gcc \
-    bash
+RUN apt-get update && apt-get upgrade && apt-get install -y build-essential
 
 RUN mkdir -p /cpp-build-volumes/artifacts
 RUN mkdir -p /cpp-build-volumes/src

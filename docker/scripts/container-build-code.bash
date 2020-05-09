@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+#
+# This isn't strictly necessary, and could all be run from ENTRYPOINT. But I
+# like to have checks
 
 if [ -z $CPP_SOURCE_DIR ]; then
     echo "Error: container environement var 'CPP_SOURCE_DIR' not set"
@@ -14,7 +17,7 @@ if [ ! -d $CPP_BUILD_DIR ]; then
 fi
 
 cd $CPP_SOURCE_DIR
-make
+make dst=${CPP_BUILD_DIR}
 if [ "$?" != "0" ]; then
     echo "Error: unable to build code!"
     exit 1

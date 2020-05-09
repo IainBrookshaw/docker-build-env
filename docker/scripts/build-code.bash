@@ -29,6 +29,7 @@ echo "BuildCode: code source:      \"$source_dir\""
 echo "BuildCode: code dst:         \"$output_dir\""
 echo 
 
+echo "BuildCode: Container output:"
 docker run --rm \
     --name "cpp-build" \
     -u $(id -u ${USER}):$(id -g ${USER}) \
