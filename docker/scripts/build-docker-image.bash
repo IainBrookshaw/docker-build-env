@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #
 # simple script to build image
+#
 _this_dir="$( cd "$(dirname "$0")" ; pwd -P )"
 pushd `pwd` > /dev/null 2>&1
 cd $_this_dir

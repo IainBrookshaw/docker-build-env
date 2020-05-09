@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 #
+# This is a container-side script. It will be copied into the container by
+# 'docker build'
+#
 # This isn't strictly necessary, and could all be run from ENTRYPOINT. But I
 # like to have checks
 

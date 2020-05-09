@@ -12,12 +12,13 @@ FROM ubuntu:18.04
 
 RUN apt-get update && apt-get upgrade && apt-get install -y build-essential
 
+# set up the input and output volumes
 RUN mkdir -p /cpp-build-volumes/artifacts
 RUN mkdir -p /cpp-build-volumes/src
+#
 VOLUME [ "/cpp-build-volumes/artifacts", "/cpp-build-volumes/src" ]
 ENV CPP_SOURCE_DIR="/cpp-build-volumes/src"
 ENV CPP_BUILD_DIR="/cpp-build-volumes/artifacts"
 
 COPY scripts/container-build-code.bash /
-
 ENTRYPOINT [ "/bin/bash", "-c", "/container-build-code.bash" ]

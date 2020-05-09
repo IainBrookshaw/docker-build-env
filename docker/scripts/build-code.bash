@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 #
-# simple script to build image
+# Simple script to use the image from 'build-docker-image.bash' to compile
+# the c++ code in 'src'
+#
 _this_dir="$( cd "$(dirname "$0")" ; pwd -P )"
 pushd `pwd` > /dev/null 2>&1
 cd $_this_dir
