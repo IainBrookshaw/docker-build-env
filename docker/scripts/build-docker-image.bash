@@ -7,7 +7,7 @@ cd $_this_dir
 
 docker_context=$(cd ../../ && pwd)/docker
 dockerfile=$(cd ../ && pwd)/cpp-build.dockerfile
-image_name="cpp-build:latest" #todo: make this input arg/optarg
+image_name=$1 #todo: make this input arg/optarg
 
 echo
 echo "ImageBuild: building image:       \"$image_name\""
